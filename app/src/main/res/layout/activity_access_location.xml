@@ -1,0 +1,252 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9C27B0"
+    android:scrollbarStyle="outsideOverlay"
+
+    android:scrollbars="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_dynamic_tertiary40"
+        tools:context=".AccessLocationActivity_1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:background="#FFEB3B"
+            app:layout_constraintStart_toStartOf="@+id/top"
+            app:layout_constraintTop_toBottomOf="@+id/top">
+
+            <Button
+                android:id="@+id/getCurrentLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:onClick="getCurrentLocation"
+                android:text="getCurrentLocation"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/addProximityAlert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:onClick="addProximityAlert"
+                android:text="addProximityAlert"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/distanceTo" />
+
+            <Button
+                android:id="@+id/distanceTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:onClick="distanceTo"
+                android:text="distanceTo"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/distanceBetween" />
+
+            <Button
+                android:id="@+id/distanceBetween"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:onClick="distanceBetween"
+                android:text="distanceBetween"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/requestLocationUpdates" />
+
+            <Button
+                android:id="@+id/requestLocationUpdates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:onClick="requestLocationUpdates"
+                android:text="requestLocationUpdates"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/getCurrentLocation" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="64dp"
+            android:background="#F44336"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/Altitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Altitude"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/Longitude"
+                app:layout_constraintTop_toTopOf="@+id/Altitude_0" />
+
+            <TextView
+                android:id="@+id/Latitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:text="Latitude"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/CurrentLocation_0"
+                app:layout_constraintTop_toTopOf="@+id/Latitude_0" />
+
+            <TextView
+                android:id="@+id/Longitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Longitude"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/Latitude"
+                app:layout_constraintTop_toTopOf="@+id/Longitude_0" />
+
+            <TextView
+                android:id="@+id/Latitude_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Latitude:"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="@+id/CurrentLocation_0"
+                app:layout_constraintTop_toBottomOf="@+id/CurrentLocation_0" />
+
+            <TextView
+                android:id="@+id/CurrentLocation_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:text="CurrentLocation:"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Altitude_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:text="Altitude:"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/Longitude_0"
+                app:layout_constraintTop_toBottomOf="@+id/Longitude_0" />
+
+            <TextView
+                android:id="@+id/Longitude_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Longitude:"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="@+id/Latitude_0"
+                app:layout_constraintTop_toBottomOf="@+id/Latitude_0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:layout_marginBottom="64dp"
+            android:background="#3F51B5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/middle"
+            app:layout_constraintTop_toBottomOf="@+id/middle">
+
+            <TextView
+                android:id="@+id/distanceBetween_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:text="distanceBetween:"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/distanceTo_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="distanceTo"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/distanceTo_1"
+                app:layout_constraintEnd_toEndOf="@+id/distanceBetween_2" />
+
+            <TextView
+                android:id="@+id/distanceTo_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="distanceTo:"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="@+id/distanceBetween_1"
+                app:layout_constraintTop_toBottomOf="@+id/distanceBetween_1" />
+
+            <TextView
+                android:id="@+id/addProximityAlert_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:text="addProximityAlert:"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/distanceTo_1"
+                app:layout_constraintTop_toBottomOf="@+id/distanceTo_1" />
+
+            <TextView
+                android:id="@+id/distanceBetween_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="128dp"
+                android:layout_marginEnd="24dp"
+                android:text="distanceBetween"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/distanceBetween_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/distanceBetween_1" />
+
+            <TextView
+                android:id="@+id/addProximityAlert_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="addProximityAlert"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/addProximityAlert_1"
+                app:layout_constraintEnd_toEndOf="@+id/distanceTo_2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
